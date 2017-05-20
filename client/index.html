@@ -22,19 +22,29 @@
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
-    <script> app.init(); </script> 
   </head>
   <body>
     <div id="main">
       <h1>chatterbox</h1>
+      <div id="rooms">
+        Rooms: 
+        <select id="roomSelect">
+        </select>
+      </div>
+      
       <!-- Your HTML goes here! -->
-      <form>
-        <input type="text">
-        
+      <form action="#" id="send" method="post">
+        Message:<br>
+        <input type="text" name="message" id="message"><br>
+        <input type="submit" name="submit" class="submit">
       </form>
-      <button class="button">Submit</button>
+      
+      <!-- <button class="button" id="button">Submit</button> -->
       
     </div>
     <div id="chats"></div>
+    <script> 
+      app.init(); 
+    </script> 
   </body>
 </html>
